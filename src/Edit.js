@@ -142,7 +142,7 @@ function EditDepartment() {
         })
         .commit();
 
-      console.log('Data updated in Sanity:', result);
+     // console.log('Data updated in Sanity:', result);
 
       // Show success notification
       toast.success('Data updated successfully', {
@@ -150,7 +150,7 @@ function EditDepartment() {
         autoClose: 1000, // 1 second
       });
     } catch (error) {
-      console.error('Error updating data in Sanity:', error);
+    //  console.error('Error updating data in Sanity:', error);
       // Show error notification
       toast.error('Error updating data', {
         position: toast.POSITION.TOP_RIGHT,

@@ -108,7 +108,7 @@ function CampusForm() {
         departments: formData.departments,
       });
 
-      console.log('Data posted to Sanity:', result);
+      /*console.log('Data posted to Sanity:', result);*/
 
       setFormData({
         name: '',
@@ -124,9 +124,9 @@ function CampusForm() {
         autoClose: 1000, // 1 second
       });
     } catch (error) {
-      console.error('Error posting data to Sanity:', error);
+      //console.error('Error posting data to Sanity:', error);
       // Show error notification
-      toast.error('Error submitting data', {
+      toast.error('Error submitting data Try Again', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 1000, // 1 second
       });
@@ -142,7 +142,7 @@ function CampusForm() {
         </div>
         <div>
           <Button type="submit" variant="contained" class="update create">
-            Update
+            Create 
           </Button>
         </div>
       </form>
@@ -193,7 +193,7 @@ function CampusForm() {
       <ToastContainer style={
         {
           
-          'font-size':'20px'
+          'fontSize':'20px'
         }
       } autoClose={1000} /></body>
    
