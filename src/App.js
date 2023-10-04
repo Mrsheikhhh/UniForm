@@ -1,25 +1,24 @@
 import logo from './logo.svg';
+import CampusForm from './Input'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Edit from './Edit'
+import Input from './Input'
+
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+     <Router>
+      <Routes>
+        <Route path="/edit/:id/:name" element={<Edit />} />
+        <Route path="/create/:name" element={<Input />} />
+      </Routes>
+    </Router>
+      
+      );
 }
 
 export default App;
