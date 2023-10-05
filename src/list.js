@@ -6,6 +6,8 @@ export const departmentOptions = [
   { value:'Mechanical_Engineering',text:'Mechanical-Engineering'},
   {value:'Chemical_Engineering',text:'Chemical-Engineering'},
   {value:'Civil_Engineering',text:'Civil-Engineering'},
+  {value:'Agronomy',text:'Agronomy'},
+  {value:' Entomology',text:' Entomology'},
   {value:'Political_Science',text:'Political-Science'},
   {value:'Law',text:'Law'},
   {value:'Management_Sciences',text:'Management-Sciences'},
@@ -338,6 +340,24 @@ Mechanical_Engineering:[
 { value: 'Master of Science (MS) in Neurobiology', text: 'Master of Science (MS) in Neurobiology' },
 { value: 'Bachelor of Science (BS) in Neurobiology', text: 'Bachelor of Science (BS) in Neurobiology' },
 
-      ]
+      ],
+  Agronomy:[
+    
+  { value: 'B.Sc. in Agronomy', text: 'B.Sc. in Agronomy' },
+  { value: 'M.Sc. in Agronomy', text: 'M.Sc. in Agronomy' },
+  { value: 'Ph.D. in Agronomy', text: 'Ph.D. in Agronomy' },
+  { value: 'Diploma in Crop Management', text: 'Diploma in Crop Management' }
+  // Add more degrees specific to the Department of Agronomy as needed
+],
+ Entomology:
+    [
+  { value: 'B.Sc. in Agronomy', text: 'B.Sc. in Agronomy' },
+  { value: 'M.Sc. in Agronomy', text: 'M.Sc. in Agronomy' },
+  { value: 'Ph.D. in Agronomy', text: 'Ph.D. in Agronomy' },
+  { value: 'Diploma in Crop Management', text: 'Diploma in Crop Management' }
+  // Add more degrees specific to the Department of Agronomy as needed
+],
+
+
   // Add more degrees for each department as needed
 };

@@ -56,7 +56,7 @@ function EditDepartment() {
           console.log(document)
           // Set the form data based on the fetched document
           setFormData({
-            name:name,
+            
             address: document.address,
             phone: document.phone,
             description: document.description,

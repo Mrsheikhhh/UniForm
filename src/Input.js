@@ -175,8 +175,11 @@ function CampusForm() {
                   color={selectedDegrees.includes(degreeOption.value) ? 'primary' : 'default'}
                   onClick={() => handleDegreeToggle(degreeOption.value)}
                   style={{ marginRight: '8px', marginBottom: '8px',
-                  overflowX: 'scroll',
-        maxWidth: '150px'}}
+                  overflowX: 'auto',
+        
+                    width:'200px'
+                    
+                  }}
                 />
               ))}
           </div>
