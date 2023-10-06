@@ -204,7 +204,7 @@ function EditDepartment() {
                   onClick={() => handleDegreeToggle(degreeOption.value)}
                   style={{ marginRight: '8px', marginBottom: '8px',
                   overflowX: 'scroll',
-        maxWidth: '150px'}}
+        width: '200px'}}
                 />
               ))}
           </div>

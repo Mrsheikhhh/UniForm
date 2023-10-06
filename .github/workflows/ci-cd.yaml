@@ -1,0 +1,28 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main # Replace with your target branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        npm install # Replace with your build commands
+
+    - name: Run tests
+      run: |
+        npm test # Replace with your test commands
+
+    - name: Deploy to Production
+      if: github.ref == 'refs/heads/main' # Only deploy from the main branch
+      run: |
+        # Add your deployment commands here
+        
