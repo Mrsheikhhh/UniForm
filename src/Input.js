@@ -133,7 +133,7 @@ function CampusForm() {
     }
   };
 
-  return (    <body class="body"><div class="div-block-4"><h1 class="heading-5">YOUR VIEWS ARE MUCH APPRECIATED </h1></div> <form onSubmit={handleSubmit}>
+  return (    <body class="body"><div class="div-block-4"><h1 class="heading-5">YOUR VIEWS ARE MUCH APPRECIATED So Much Thanks To You </h1></div> <form onSubmit={handleSubmit}>
         <div>
           <Button variant="outlined" onClick={handleAddDepartment}
           class="addDepart">
