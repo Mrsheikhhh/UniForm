@@ -1,35 +1,13 @@
 // data.js
 
 export const departmentOptions = [
-  { value: 'Computer', text: 'Computer' },
-  { value: 'Electrical_Engineering', text: 'Electrical-Engineering' },
-  { value:'Mechanical_Engineering',text:'Mechanical-Engineering'},
-  {value:'Chemical_Engineering',text:'Chemical-Engineering'},
-  {value:'Civil_Engineering',text:'Civil-Engineering'},
-  {value:'Agronomy',text:'Agronomy'},
-  {value:' Entomology',text:' Entomology'},
-  {value:'Political_Science',text:'Political-Science'},
-  {value:'Law',text:'Law'},
-  {value:'Management_Sciences',text:'Management-Sciences'},
-  {value:'Biotechnology',text:'Biotechnology'},
-  {value:'Mathemathics',text:'Mathemathics'
-  },
-  {value:'Phycology',text:'Phycology'},
-  {value:'Arts_and_Design',text:'Arts and D sign'},
-  {value:'Botany',text:'Botany'},
-  {value:'Environmental_Sciences',text:'Environmental Sciences'},
-  {value:'Physics',text:'Physics'},
-  {value:'Sociology_Department',text:'Socialogy'},
-  {value:'Surgery',text:'Surgery'},
-  {value:'Neurology',text:'Neurology'},
-  {value:'NeuroBiology',text:'NeuroBiology'
-},
 
 ];
 
-export const degreeOptions = {
-  Computer: [
+export const degreeOptions = [
+  
   { value: 'B.Sc. Computer Science', text: 'B.Sc. Computer Science' },
+  {value:'BSc. Information Technology',text:'BSc Information Technology'},
   { value: 'B.Tech Computer Science', text: 'B.Tech Computer Science' },
   { value: 'BCA (Bachelor of Computer Applications)', text: 'BCA (Bachelor of Computer Applications)' },
   { value: 'BE Computer Science', text: 'BE Computer Science' },
@@ -56,9 +34,10 @@ export const degreeOptions = {
 
 
 
-  ],
-  Electrical_Engineering : [
+  
+  
    { value: 'B.Sc. Electrical Engineering', text: 'B.Sc. Electrical Engineering' },
+   { value:'Computer Engineering',text:'Computer Engineering'},
   { value: 'B.Tech Electrical Engineering', text: 'B.Tech Electrical Engineering' },
   { value: 'BE Electrical Engineering', text: 'BE Electrical Engineering' },
   { value: 'M.Sc. Electrical Engineering', text: 'M.Sc. Electrical Engineering' },
@@ -78,8 +57,7 @@ export const degreeOptions = {
   { value: 'BS-Electrical Instrumentation', text: 'BS-Electrical Instrumentation' },
 
  
-],
-Mechanical_Engineering:[
+
    { value: 'B.Sc. Mechanical Engineering', text: 'B.Sc. Mechanical Engineering' },
   { value: 'B.Tech Mechanical Engineering', text: 'B.Tech Mechanical Engineering' },
   { value: 'BE Mechanical Engineering', text: 'BE Mechanical Engineering' },
@@ -99,10 +77,9 @@ Mechanical_Engineering:[
   { value: 'BS-Energy Systems', text: 'BS-Energy Systems' },
   { value: 'BS-Aerospace Engineering', text: 'BS-Aerospace Engineering' },
 
+  { value: 'BS English', text: 'BS English ' },
 
-
-  ],
-  Chemical_Engineering:[
+  
     { value: 'B.Sc. Chemical Engineering', text: 'B.Sc. Chemical Engineering' },
   { value: 'B.Tech Chemical Engineering', text: 'B.Tech Chemical Engineering' },
   { value: 'BE Chemical Engineering', text: 'BE Chemical Engineering' },
@@ -113,17 +90,15 @@ Mechanical_Engineering:[
   { value: 'D.CE (Doctor of Chemical Engineering)', text: 'D.CE (Doctor of Chemical Engineering)' },
   { value: 'BS-Chemical Process Engineering', text: 'BS-Chemical Process Engineering' },
   { value: 'BS-Petroleum Engineering', text: 'BS-Petroleum Engineering' },
-  { value: 'BS-Environmental Engineering', text: 'BS-Environmental Engineering' },
   { value: 'BS-Polymer Engineering', text: 'BS-Polymer Engineering' },
   { value: 'BS-Process Safety Engineering', text: 'BS-Process Safety Engineering' },
   { value: 'BS-Food Engineering', text: 'BS-Food Engineering' },
   { value: 'BS-Pharmaceutical Engineering', text: 'BS-Pharmaceutical Engineering' },
   { value: 'BS-Bioprocess Engineering', text: 'BS-Bioprocess Engineering' },
   { value: 'BS-Energy Engineering', text: 'BS-Energy Engineering' },
-  { value: 'BS-Materials Engineering', text: 'BS-Materials Engineering' },
+ 
 
-    ],
-    Civil_Engineering:[
+    
       { value: 'B.Sc. Civil Engineering', text: 'B.Sc. Civil Engineering' },
   { value: 'B.Tech Civil Engineering', text: 'B.Tech Civil Engineering' },
   { value: 'BE Civil Engineering', text: 'BE Civil Engineering' },
@@ -131,16 +106,22 @@ Mechanical_Engineering:[
   { value: 'M.Tech Civil Engineering', text: 'M.Tech Civil Engineering' },
   { value: 'ME Civil Engineering', text: 'ME Civil Engineering' },
   { value: 'Ph.D. Civil Engineering', text: 'Ph.D. Civil Engineering' },
-  { value: 'BS-Structural Engineering', text: 'BS-Structural Engineering' },
+  
   { value: 'BS-Transportation Engineering', text: 'BS-Transportation Engineering' },
+    { value: 'BS Radiogy', text: 'BS Radiology' },
+    {value:'Doctor of Pharmacy',text:'Doctor of Pharmacy'},
+        {value:'BS Biochemistry',text:'BS Biochemistry'},
+            {value:'BS Human Nutration & Diet',text:'BS Human Nutration & Diet'},
+                {value:'BS Prosthetic and Orthotics',text:'BS Prosthetic and Orthotics'},
+    
+  
   { value: 'BS-Environmental Engineering', text: 'BS-Environmental Engineering' },
   { value: 'BS-Geotechnical Engineering', text: 'BS-Geotechnical Engineering' },
   { value: 'BS-Water Resources Engineering', text: 'BS-Water Resources Engineering' },
   { value: 'BS-Construction Engineering', text: 'BS-Construction Engineering' },
   { value: 'BS-Civil and Environmental Engineering', text: 'BS-Civil and Environmental Engineering' },
-  { value:'Law',text:'Law'}
-      ],
-      Political_Science:[
+  { value:'Law',text:'Law'},
+      
         { value: 'B.A. in Political Science', text: 'B.A. in Political Science' },
   { value: 'B.S. in Political Science', text: 'B.S. in Political Science' },
   { value: 'B.A. in International Relations', text: 'B.A. in International Relations' },
@@ -154,10 +135,10 @@ Mechanical_Engineering:[
   { value: 'M.A. in Diplomacy and International Relations', text: 'M.A. in Diplomacy and International Relations' },
   { value: 'M.S. in Public Policy and Administration', text: 'M.S. in Public Policy and Administration' },
   { value: 'Ph.D. in Political Science and Government', text: 'Ph.D. in Political Science and Government' },
+   { value: 'Doctor of Physical Therapy', text: 'Doctor of Physical Therapy' },
+     { value: 'BS Medical Lab Technology', text: 'BS Medical Lab Technology' },
 
-
-        ],
-  Law:[
+        
     
   { value: 'Juris Doctor (J.D.)', text: 'Juris Doctor (J.D.)' },
   { value: 'Master of Laws (LL.M.)', text: 'Master of Laws (LL.M.)' },
@@ -174,8 +155,7 @@ Mechanical_Engineering:[
 
 
     
-    ],
-    Management_Sciences:[
+    
       
   { value: 'Bachelor of Business Administration (BBA)', text: 'Bachelor of Business Administration (BBA)' },
   { value: 'Master of Business Administration (MBA)', text: 'Master of Business Administration (MBA)' },
@@ -192,8 +172,7 @@ Mechanical_Engineering:[
   { value: 'Master of Accounting (M.Acc)', text: 'Master of Accounting (M.Acc)' },
 
 
-      ],
- Biotechnology:[
+      
    
   { value: 'Bachelor of Science in Biotechnology', text: 'Bachelor of Science in Biotechnology' },
   { value: 'Master of Science in Biotechnology', text: 'Master of Science in Biotechnology' },
@@ -209,8 +188,7 @@ Mechanical_Engineering:[
   { value: 'Bachelor of Science in Molecular Biology', text: 'Bachelor of Science in Molecular Biology' },
   { value: 'Master of Science in Molecular Biology', text: 'Master of Science in Molecular Biology' },
 
-   ],
-   Mathematics:[
+  
     
   { value: 'Bachelor of Science in Mathematics', text: 'Bachelor of Science in Mathematics' },
   { value: 'Bachelor of Arts in Mathematics', text: 'Bachelor of Arts in Mathematics' },
@@ -226,8 +204,7 @@ Mechanical_Engineering:[
   { value: 'Bachelor of Science in Computational Mathematics', text: 'Bachelor of Science in Computational Mathematics' },
   { value: 'Master of Science in Computational Mathematics', text: 'Master of Science in Computational Mathematics' },
 
-     ],
-   Phycology:[
+    
      { value: 'Bachelor of Science in Psychology', text: 'Bachelor of Science in Psychology' },
 { value: 'Bachelor of Arts in Psychology', text: 'Bachelor of Arts in Psychology' },
 { value: 'Bachelor of Science in Applied Psychology', text: 'Bachelor of Science in Applied Psychology' },
@@ -239,10 +216,8 @@ Mechanical_Engineering:[
 { value: 'Doctor of Philosophy in Clinical Psychology', text: 'Doctor of Philosophy in Clinical Psychology' },
 { value: 'Master of Forensic Psychology', text: 'Master of Forensic Psychology' },
 { value: 'Master of Counseling Psychology', text: 'Master of Counseling Psychology' },
-{ value: 'Ph.D. in Educational Psychology', text: 'Ph.D. in Educational Psychology' }
-
-     ],
-     Arts_and_Design:[
+{ value: 'Ph.D. in Educational Psychology', text: 'Ph.D. in Educational Psychology' },
+     
        { value: 'Bachelor of Fine Arts (BFA) in Graphic Design', text: 'Bachelor of Fine Arts (BFA) in Graphic Design' },
 { value: 'Bachelor of Arts (BA) in Studio Art', text: 'Bachelor of Arts (BA) in Studio Art' },
 { value: 'Bachelor of Design (BDes) in Industrial Design', text: 'Bachelor of Design (BDes) in Industrial Design' },
@@ -254,10 +229,9 @@ Mechanical_Engineering:[
 { value: 'Master of Fine Arts (MFA) in Illustration', text: 'Master of Fine Arts (MFA) in Illustration' },
 { value: 'Bachelor of Fine Arts (BFA) in Fashion Design', text: 'Bachelor of Fine Arts (BFA) in Fashion Design' },
 { value: 'Bachelor of Arts (BA) in Art Education', text: 'Bachelor of Arts (BA) in Art Education' },
-{ value: 'Master of Fine Arts (MFA) in Photography', text: 'Master of Fine Arts (MFA) in Photography' }
+{ value: 'Master of Fine Arts (MFA) in Photography', text: 'Master of Fine Arts (MFA) in Photography' },
 
-       ],
-  Botany:[
+    
     { value: 'Bachelor of Science (BSc) in Botany', text: 'Bachelor of Science (BSc) in Botany' },
 { value: 'Master of Science (MSc) in Plant Biology', text: 'Master of Science (MSc) in Plant Biology' },
 { value: 'Doctor of Philosophy (Ph.D.) in Botanical Sciences', text: 'Doctor of Philosophy (Ph.D.) in Botanical Sciences' },
@@ -269,10 +243,9 @@ Mechanical_Engineering:[
 { value: 'Bachelor of Science (BSc) in Plant Genetics', text: 'Bachelor of Science (BSc) in Plant Genetics' },
 { value: 'Master of Science (MSc) in Phycology', text: 'Master of Science (MSc) in Phycology' },
 { value: 'Bachelor of Science (BSc) in Bryology', text: 'Bachelor of Science (BSc) in Bryology' },
-{ value: 'Master of Science (MSc) in Plant Pathology', text: 'Master of Science (MSc) in Plant Pathology' }
+{ value: 'Master of Science (MSc) in Plant Pathology', text: 'Master of Science (MSc) in Plant Pathology' },
   
-    ],
-  Environmental_Sciences:[
+    
     
     { value: 'Bachelor of Science (BSc) in Environmental Sciences', text: 'Bachelor of Science (BSc) in Environmental Sciences' },
 { value: 'Master of Science (MSc) in Environmental Management', text: 'Master of Science (MSc) in Environmental Management' },
@@ -289,11 +262,9 @@ Mechanical_Engineering:[
 { value: 'Bachelor of Science (BSc) in Oceanography', text: 'Bachelor of Science (BSc) in Oceanography' },
 { value: 'Master of Science (MSc) in Environmental Economics', text: 'Master of Science (MSc) in Environmental Economics' },
 { value: 'Bachelor of Science (BSc) in Geology', text: 'Bachelor of Science (BSc) in Geology' },
-{ value: 'Master of Science (MSc) in Water Resources Management', text: 'Master of Science (MSc) in Water Resources Management' }
+{ value: 'Master of Science (MSc) in Water Resources Management', text: 'Master of Science (MSc) in Water Resources Management' },
 
-    ],
-    
-  Physics:[
+   
     { value: 'Bachelor of Science (BSc) in Physics', text: 'Bachelor of Science (BSc) in Physics' },
 { value: 'Master of Science (MSc) in Theoretical Physics', text: 'Master of Science (MSc) in Theoretical Physics' },
 { value: 'Doctor of Philosophy (Ph.D.) in Astrophysics', text: 'Doctor of Philosophy (Ph.D.) in Astrophysics' },
@@ -313,51 +284,48 @@ Mechanical_Engineering:[
 { value: 'Ph.D. in High-Energy Physics', text: 'Ph.D. in High-Energy Physics' },
 
     
-    ],
-  Socialogy:[
+   
     
     { value: 'Bachelor of Arts (BA) in Sociology', text: 'Bachelor of Arts (BA) in Sociology' },
 { value: 'Master of Arts (MA) in Sociology', text: 'Master of Arts (MA) in Sociology' },
 { value: 'Ph.D. in Sociology', text: 'Ph.D. in Sociology' },
 
-    ],
-   Surgery:[{ value: 'Doctor of Medicine (MD) in Surgery', text: 'Doctor of Medicine (MD) in Surgery' },
+   
+   { value: 'Doctor of Medicine (MD) in Surgery', text: 'Doctor of Medicine (MD) in Surgery' },
 { value: 'Master of Surgery (MS)', text: 'Master of Surgery (MS)' },
 { value: 'Doctor of Surgical Sciences (DSc)', text: 'Doctor of Surgical Sciences (DSc)' },
 
      
      
-     ],
-   Neurology:[
+     
      { value: 'Doctor of Medicine (MD) in Neurology', text: 'Doctor of Medicine (MD) in Neurology' },
 { value: 'Doctor of Philosophy (Ph.D.) in Neurological Sciences', text: 'Doctor of Philosophy (Ph.D.) in Neurological Sciences' },
 { value: 'Master of Science (MS) in Neuroscience', text: 'Master of Science (MS) in Neuroscience' },
 
-     ],
-    NeuroBiology:[
+    
       
       { value: 'Doctor of Philosophy (Ph.D.) in Neurobiology', text: 'Doctor of Philosophy (Ph.D.) in Neurobiology' },
 { value: 'Master of Science (MS) in Neurobiology', text: 'Master of Science (MS) in Neurobiology' },
 { value: 'Bachelor of Science (BS) in Neurobiology', text: 'Bachelor of Science (BS) in Neurobiology' },
 
-      ],
-  Agronomy:[
+     
     
-  { value: 'B.Sc. in Agronomy', text: 'B.Sc. in Agronomy' },
-  { value: 'M.Sc. in Agronomy', text: 'M.Sc. in Agronomy' },
-  { value: 'Ph.D. in Agronomy', text: 'Ph.D. in Agronomy' },
-  { value: 'Diploma in Crop Management', text: 'Diploma in Crop Management' }
+  
+  
+ 
+  { value: 'Diploma in Crop Management', text: 'Diploma in Crop Management' },
   // Add more degrees specific to the Department of Agronomy as needed
-],
- Entomology:
-    [
-  { value: 'B.Sc. in Agronomy', text: 'B.Sc. in Agronomy' },
-  { value: 'M.Sc. in Agronomy', text: 'M.Sc. in Agronomy' },
-  { value: 'Ph.D. in Agronomy', text: 'Ph.D. in Agronomy' },
-  { value: 'Diploma in Crop Management', text: 'Diploma in Crop Management' }
-  // Add more degrees specific to the Department of Agronomy as needed
-],
 
+  { value: 'B.Sc. in Agronomy', text: 'B.Sc. in Agronomy' },
+  { value: 'M.Sc. in Agronomy', text: 'M.Sc. in Agronomy' },
+  { value: 'Ph.D. in Agronomy', text: 'Ph.D. in Agronomy' },
+    { value: ' BS (Biosciences)', text: ' BS (Biosciences)' },
+      { value: ' M.Phil. Biosciences', text: ' M.Phil. Biosciences' },
+        { value: ' M.Phil. Pharmacology', text: ' M.Phil. Pharmacology' },
+  
+ 
+  // Add more degrees specific to the Department of Agronomy as needed
+]
 
   // Add more degrees for each department as needed
-};
+

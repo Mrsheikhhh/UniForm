@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/edit/:id/" element={<Edit />} />
         <Route path="/create/:name" element={<Input />} />
+      
       </Routes>
     </Router>
       

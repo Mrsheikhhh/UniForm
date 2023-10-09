@@ -13,7 +13,7 @@ import {
   Box,
 } from '@mui/material';
 import { useParams } from 'react-router-dom'
-import { departmentOptions, degreeOptions } from './list'; 
+import { degreeOptions} from './list'; 
 import sanityClient from '@sanity/client';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,18 +27,18 @@ const client = sanityClient({
 
 
 
+
 function CampusForm() {
-  const {name} =useParams()
   const [formData, setFormData] = useState({
-    name: '',
+    name:'',
     address: '',
     phone: '',
     description: '',
-    departments: [],
+    degrees: [],
   });
 
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [selectedDepartment, setSelectedDepartment] = useState('');
+   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDegrees, setSelectedDegrees] = useState([]);
 
   const handleInputChange = (e) => {
@@ -54,14 +54,9 @@ function CampusForm() {
   };
 
   const handleDialogClose = () => {
-    // Clear selected department and degrees on close
-    setSelectedDepartment('');
     setSelectedDegrees([]);
+    setSearchQuery('');
     setDialogOpen(false);
-  };
-
-  const handleDepartmentSelect = (department) => {
-    setSelectedDepartment(department);
   };
 
   const handleDegreeToggle = (degree) => {
@@ -72,29 +67,29 @@ function CampusForm() {
     );
   };
 
-  const handleAddDepartment = () => {
+  const handleAddDegrees = () => {
     setDialogOpen(true);
   };
 
-  const handleAddDepartmentSubmit = () => {
-    if (selectedDepartment) {
+  const handleAddDegreesSubmit = () => {
+    if (selectedDegrees.length > 0) {
       setFormData({
         ...formData,
-        departments: [...formData.departments, { department: selectedDepartment, degrees: selectedDegrees }],
+        degrees: selectedDegrees,
       });
 
-      setSelectedDepartment('');
       setSelectedDegrees([]);
       setDialogOpen(false);
 
-      // Show success toast for "Add Department" button on the popup
-      toast.success('Department added successfully!', {
+      // Show success toast for "Add Degrees" button on the popup
+      toast.success('Degrees added successfully!', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 1000, // 1 second
       });
     }
   };
-
+  
+const {name}=useParams()
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -105,17 +100,17 @@ function CampusForm() {
         address: formData.address,
         phone: formData.phone,
         description: formData.description,
-        departments: formData.departments,
+        degrees: formData.degrees,
       });
 
-      /*console.log('Data posted to Sanity:', result);*/
+      console.log('Data posted to Sanity:', result);
 
       setFormData({
         name: '',
         address: '',
         phone: '',
         description: '',
-        departments: [],
+        degrees: [],
       });
 
       // Show success notification
@@ -124,18 +119,19 @@ function CampusForm() {
         autoClose: 1000, // 1 second
       });
     } catch (error) {
-      //console.error('Error posting data to Sanity:', error);
+      console.error('Error posting data to Sanity:', error);
       // Show error notification
-      toast.error('Error submitting data Try Again', {
+      toast.error('Error submitting data', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 1000, // 1 second
       });
     }
   };
 
-  return (    <body class="body"><div class="div-block-4"><h1 class="heading-5">YOUR VIEWS ARE MUCH APPRECIATED </h1></div> <form onSubmit={handleSubmit}>
+  return ( 
+  <body class="body"><div class="div-block-4"><h1 class="heading-5">YOUR VIEWS ARE MUCH APPRECIATED </h1></div> <form onSubmit={handleSubmit}>
         <div>
-          <Button variant="outlined" onClick={handleAddDepartment}
+          <Button variant="outlined" onClick={handleAddDegrees}
           class="addDepart">
             Add Department
           </Button>
@@ -145,60 +141,58 @@ function CampusForm() {
             Create 
           </Button>
         </div>
-      </form>
-      <Dialog open={dialogOpen} onClose={handleDialogClose}>
-        <DialogTitle>Select Department and Degrees</DialogTitle>
+      </form>      <Dialog open={dialogOpen} onClose={handleDialogClose}>
+        <DialogTitle>Select Degrees</DialogTitle>
         <DialogContent>
           <div>
-            <Select
-              label="Department"
-              value={selectedDepartment}
-              onChange={(e) => handleDepartmentSelect(e.target.value)}
-              fullWidth
-            >
-              <MenuItem value="">Select Department</MenuItem>
-              {departmentOptions.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.text}
-                </MenuItem>
-              ))}
-            </Select>
-          </div>
-          <div>
-            <h4>Select Degrees</h4>
-            {degreeOptions[selectedDepartment] &&
-              degreeOptions[selectedDepartment].map((degreeOption) => (
-                <Chip
-                  key={degreeOption.value}
-                  label={degreeOption.text}
-                  clickable
-                  color={selectedDegrees.includes(degreeOption.value) ? 'primary' : 'default'}
-                  onClick={() => handleDegreeToggle(degreeOption.value)}
-                  style={{ marginRight: '8px', marginBottom: '8px',
-                  overflowX: 'auto',
-        
-                    width:'200px'
-                    
-                  }}
-                />
-              ))}
+          
+                 <TextField
+        label="Search Degrees"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        fullWidth
+        variant="outlined"
+        margin="normal" 
+        />
+            {degreeOptions
+  .filter((degreeOption) =>
+    degreeOption.text.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+  .map((degreeOption, index) => (
+    <Chip
+      key={degreeOption.value + index}
+      label={degreeOption.text}
+      clickable
+      color={selectedDegrees.includes(degreeOption.value) ? 'primary' : 'default'}
+      onClick={() => handleDegreeToggle(degreeOption.value)}
+      style={{ marginRight: '8px', marginBottom: '8px' }}
+    />
+  ))}
+
           </div>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleDialogClose} color="secondary">
             Close
           </Button>
-          <Button onClick={handleAddDepartmentSubmit} color="primary">
-            Add Department
+          <Button onClick={handleAddDegreesSubmit} color="primary">
+            Add Degrees
           </Button>
         </DialogActions>
       </Dialog>
       <ToastContainer style={
         {
           
-          'fontSize':'20px'
+          'font-size':'20px'
         }
-      } autoClose={1000} /></body>
+      }
+      
+      
+      autoClose={1000} />
+  
+   
+   </body>
+     
    
   );
 }
