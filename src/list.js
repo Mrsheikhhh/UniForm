@@ -291,8 +291,9 @@ export const degreeOptions = [
            { value: 'BS Nursing', text: 'Nursing' },
       { value: 'Bachelor in Social Sciences', text: 'Bachelor in Social Sciences' },
                  { value: 'BS AI', text: 'BS AI' },
-           
-    
+                            { value: 'BS (Media Studies)', text: 'BS (Media Studies)' },
+                      { value: 'BS (Islamic Studies)', text: 'BS (Islamic Studies)' },
+               { value: 'BS Television Broadcasting & Digital Media', text: 'BS Television Broadcasting & Digital Media' },
     { value: 'BS Public Health (BSPH)', text: 'BS Public Health (BSPH)' },
 { value: 'Master of Arts (MA) in Sociology', text: 'Master of Arts (MA) in Sociology' },
 { value: 'Ph.D. in Sociology', text: 'Ph.D. in Sociology' },
