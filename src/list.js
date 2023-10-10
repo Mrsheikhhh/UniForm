@@ -288,6 +288,10 @@ export const degreeOptions = [
 
 { value: 'BS Remote Sensing & GIS', text: 'BS Remote Sensing & GIS' },
        { value: 'DPT – Doctor in Physical Therapy', text: 'BS Public Health (BSPH)' },
+           { value: 'BS Nursing', text: 'Nursing' },
+      { value: 'Bachelor in Social Sciences', text: 'Bachelor in Social Sciences' },
+                 { value: 'BS AI', text: 'BS AI' },
+           
     
     { value: 'BS Public Health (BSPH)', text: 'BS Public Health (BSPH)' },
 { value: 'Master of Arts (MA) in Sociology', text: 'Master of Arts (MA) in Sociology' },
