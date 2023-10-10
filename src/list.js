@@ -277,16 +277,19 @@ export const degreeOptions = [
 { value: 'Ph.D. in Theoretical Plasma Physics', text: 'Ph.D. in Theoretical Plasma Physics' },
 { value: 'Bachelor of Science (BSc) in Biophysics', text: 'Bachelor of Science (BSc) in Biophysics' },
 { value: 'Master of Science (MSc) in Computational Physics', text: 'Master of Science (MSc) in Computational Physics' },
+{ value: 'BS in Business Analytics', text: 'BS in Business Analytics' },
+{ value: 'BS Supply Chain Management', text: 'BS Supply Chain Management' },
 { value: 'Bachelor of Science (BSc) in Geophysics', text: 'Bachelor of Science (BSc) in Geophysics' },
 { value: 'Master of Science (MSc) in Acoustics', text: 'Master of Science (MSc) in Acoustics' },
+{ value: 'BS Geosciences', text: 'BS Geosciences' },
 { value: 'Bachelor of Science (BSc) in Quantum Field Theory', text: 'Bachelor of Science (BSc) in Quantum Field Theory' },
 { value: 'Master of Science (MSc) in Atomic Physics', text: 'Master of Science (MSc) in Atomic Physics' },
 { value: 'Ph.D. in High-Energy Physics', text: 'Ph.D. in High-Energy Physics' },
 
+{ value: 'BS Remote Sensing & GIS', text: 'BS Remote Sensing & GIS' },
+       { value: 'DPT – Doctor in Physical Therapy', text: 'BS Public Health (BSPH)' },
     
-   
-    
-    { value: 'Bachelor of Arts (BA) in Sociology', text: 'Bachelor of Arts (BA) in Sociology' },
+    { value: 'BS Public Health (BSPH)', text: 'BS Public Health (BSPH)' },
 { value: 'Master of Arts (MA) in Sociology', text: 'Master of Arts (MA) in Sociology' },
 { value: 'Ph.D. in Sociology', text: 'Ph.D. in Sociology' },
 
